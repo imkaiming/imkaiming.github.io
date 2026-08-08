@@ -1,0 +1,114 @@
+/* ==========================================================================
+    AIR THEME - DARK VERSION
+    ========================================================================== */
+
+/* Color codes used for the theme */
+$primary-color              : #00adb5;
+$dark-primary-color         : mix(#000, $primary-color, 40%);
+$darker-primary-color       : mix(#000, $primary-color, 60%);
+$light-primary-color        : mix(#000, $primary-color, 50%);
+
+$background                 : #252a34;
+$background-light           : mix(#fff, $background, 20%);
+$background-lighter         : mix(#fff, $background, 90%);
+$text                       : #eaeaea;
+$link                       : mix($primary-color, $text, 40%);
+$link-dark                  : mix(#000, $link, 25%);
+$link-light                 : mix(#fff, $link, 25%);
+$footer                     : mix(#000, $background, 30%);
+
+/* Color codes used for the site */
+$danger-color               : #ee5f5b;
+$info-color                 : #2f7f93;
+$notice-color               : #7a8288;
+$success-color              : #62c462;
+$warning-color              : #f89406;
+
+/* Other basic settings for the template */
+$border-radius              : 4px;
+$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
+$global-transition          : all 0.2s ease-in-out;
+$masthead-height            : 70px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+/* Dark theme for the site */
+html[data-theme="dark"] {
+    --global-base-color                 : #{$primary-color};
+    --global-bg-color                   : #{$background};
+    --global-footer-bg-color            : #{$footer};
+    --global-border-color               : #{$light-primary-color};
+    --global-dark-border-color          : #{$background-light};
+    // --global-code-background-color      : #fafafa;
+    // --global-code-text-color            : #{$darker-primary-color};
+    --global-fig-caption-color          : #{$light-primary-color};
+    --global-link-color                 : #{$link};
+    --global-link-color-hover           : #{$link-dark};
+    --global-link-color-visited         : #{$link-light};
+    --global-masthead-link-color        : #{$text};
+    --global-masthead-link-color-hover  : #{$primary-color};
+    --global-text-color                 : #{$text};
+    --global-text-color-light           : #{$light-primary-color};
+    --global-thead-color                : #{$background-lighter};
+
+    --global-code-background-color      : #1e1e1e; /* Fond noir VS Code */
+    --global-code-text-color            : #d4d4d4; /* Texte gris clair de base */
+}
+
+/* ============================================ */
+/* 2. Le code en ligne (ex: `int main()`)       */
+/* ============================================ */
+p code,
+li code {
+  background-color: #2a2a2a !important;
+  color: #ce9178 !important; 
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+}
+
+/* ============================================ */
+/* 3. PALETTE DE COULEURS ROUGE (Style VS Code) */
+/* ============================================ */
+
+/* Commentaires */
+.highlight .c, 
+.highlight .c1 { color: #6A9955 !important; } 
+
+/* Directives préprocesseur (#include) */
+.highlight .cp { color: #C586C0 !important; } 
+
+/* Mots-clés (int, return, void) */
+.highlight .k, 
+.highlight .kd { color: #569CD6 !important; } 
+
+/* Types (std, string) */
+.highlight .kt { color: #4EC9B0 !important; } 
+
+/* Noms de fonctions (main, cout) */
+.highlight .nf { color: #DCDCAA !important; } 
+
+/* Chaînes de caractères ("Hello World") */
+.highlight .s, 
+.highlight .s2 { color: #CE9178 !important; } 
+
+/* Nombres (42, 3.14) */
+.highlight .mi, 
+.highlight .mo { color: #B5CEA8 !important; } 
+
+/* Opérateurs et ponctuation (<<, {}, ;) */
+.highlight .o, 
+.highlight .p { color: #D4D4D4 !important; } 
+
+/* Noms de variables/espaces de noms (std) */
+.highlight .n,
+.highlight .nn { color: #9CDCFE !important; }
+
+/* ============================================ */
+/* TAILLE DE LA POLICE POUR LE CODE             */
+/* ============================================ */
+.highlight pre {
+  font-size: 0.85rem; /* Réduit la taille (la valeur par défaut est souvent autour de 0.9rem ou 14px) */
+  line-height: 1.5;   /* Ajuste l'espacement entre les lignes pour que ce soit bien lisible */
+}

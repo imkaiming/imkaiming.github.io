@@ -1,0 +1,39 @@
+---
+layout: compress
+---
+
+{% include base_path %}
+
+<!doctype html>
+<html lang="en" class="no-js" data-theme="dark">
+  <head>
+    <script>
+      if (localStorage.getItem('userLang')) {
+        document.documentElement.lang = localStorage.getItem('userLang');
+      }
+    </script>
+    
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+  <body>
+    
+    {% comment %}
+    {% include browser-upgrade.html %}
+    {% endcomment %}
+    {% include masthead.html %}
+
+    {{ content }}
+
+    <div class="page__footer">
+      <footer>
+        {% include footer/custom.html %}
+        {% include footer.html %}
+      </footer>
+    </div>
+
+    {% include scripts.html %}
+    <script src="{{ base_path }}/js/lang-toggle.js"></script>
+    
+  </body>
+</html>

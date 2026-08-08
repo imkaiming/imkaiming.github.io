@@ -1,0 +1,126 @@
+$primary-color              : #343434;
+$dark-primary-color         : mix(#000, $primary-color, 40%);
+$darker-primary-color       : mix(#000, $primary-color, 60%);
+$light-primary-color        : mix(#fff, $primary-color, 50%);
+$lighter-primary-color      : mix(#fff, $primary-color, 90%);
+$background                 : #f3f3f3;
+$background-light           : #fafafa;
+$background-lighter        : #ffffff;
+$text                      : #343434;
+$text-muted                : #8e8b82;
+$link                      : #343434;
+$link-dark                 : mix(#000, $link, 25%);
+$link-light                : mix(#fff, $link, 25%);
+$footer                    : #e9dcbe;
+$border                    : #e9dcbe;
+$border-light              : mix(#fff, $border, 50%);
+
+/* Color codes used for the site */
+$danger-color               : #d35c5c;
+$info-color                 : #88a4d3;
+$notice-color               : #b49368;
+$success-color              : #6eb958;
+$warning-color              : #e0ac16;
+
+/* Other basic settings for the template */
+$border-radius              : 4px;
+$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
+$global-transition          : all 0.2s ease-in-out;
+$masthead-height            : 70px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+/* Light theme for the site */
+:root {
+  --global-base-color                 : #{$primary-color};
+  --global-bg-color                   : #{$background};
+  --global-footer-bg-color            : #{$footer};
+  --global-border-color               : #{$border};
+  --global-dark-border-color          : #{$text-muted};
+  --global-code-background-color      : #{$background-lighter};
+  --global-code-text-color            : #{$darker-primary-color};
+  --global-fig-caption-color          : #{$text-muted};
+  --global-link-color                 : #{$link};
+  --global-link-color-hover           : #{$link-dark};
+  --global-link-color-visited         : #{$link-light};
+  --global-masthead-link-color        : #{$text};
+  --global-masthead-link-color-hover  : #{$text-muted};
+  --global-text-color                 : #{$text};
+  --global-text-color-light           : #{$text-muted};
+  --global-thead-color                : #{$border-light};
+}
+
+footer {
+  color: #{$text};
+}
+
+// Do not change the color of the social icons in the feed icons
+.page__footer-follow .social-icons i:not(.fa-rss-square),
+.page__footer-follow .social-icons .svg-inline--fa:not(.fa-rss-square) {
+  color: inherit;
+}
+
+/* ============================================ */
+/* OVERRIDE : Vrai fond noir + couleurs C++     */
+/* ============================================ */
+
+/* 1. Fond noir pour les gros blocs */
+.highlight,
+.highlight pre {
+  background-color: #1e1e1e !important; 
+  border: 1px solid #333 !important;    
+  border-radius: 4px !important;
+}
+.highlight pre {
+  padding: 15px; 
+}
+
+/* 2. Le code en ligne (ex: `int main()` dans une phrase) */
+p code,
+li code {
+  background-color: #2a2a2a !important;
+  color: #ce9178 !important; /* Couleur orange pour les bouts de code dans le texte */
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+}
+
+
+/* ============================================ */
+/* 3. PALETTE DE COULEURS ROUGE (Style VS Code) */
+/* ============================================ */
+/* Rouge utilise des classes .k, .nf, .s, etc. On les définie ici */
+
+/* Commentaires */
+.highlight .c, 
+.highlight .c1 { color: #6A9955 !important; } 
+
+/* Directives préprocesseur (#include) */
+.highlight .cp { color: #C586C0 !important; } 
+
+/* Mots-clés (int, return, void) */
+.highlight .k, 
+.highlight .kd { color: #569CD6 !important; } 
+
+/* Types (std, string) */
+.highlight .kt { color: #4EC9B0 !important; } 
+
+/* Noms de fonctions (main, cout) */
+.highlight .nf { color: #DCDCAA !important; } 
+
+/* Chaînes de caractères ("Hello World") */
+.highlight .s, 
+.highlight .s2 { color: #CE9178 !important; } 
+
+/* Nombres (42, 3.14) */
+.highlight .mi, 
+.highlight .mo { color: #B5CEA8 !important; } 
+
+/* Opérateurs et ponctuation (<<, {}, ;) */
+.highlight .o, 
+.highlight .p { color: #D4D4D4 !important; } 
+
+/* Noms de variables/espaces de noms (std) */
+.highlight .n,
+.highlight .nn { color: #9CDCFE !important; }
